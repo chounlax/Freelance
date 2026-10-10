@@ -253,21 +253,38 @@ img {
   box-shadow: 12px 12px 0 var(--blue);
 }
 
-.hero__card img {
-  width: 72%;
-  aspect-ratio: 1;
-  margin: 1.6rem auto;
-  object-fit: cover;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  box-shadow: 6px 6px 0 var(--blue);
+/* Logo « ST. » : en blanc dans l'en-tête, en bleu nuit dans « À propos » */
+.logo-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.4rem 1rem 2.6rem;
+}
+
+.logo-mark__code {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #6f93ff;
+}
+
+.logo-mark__st {
+  font-size: 8.5rem;
+  font-weight: 900;
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+  color: #fff;
+  text-shadow: 7px 7px 0 var(--blue);
+}
+
+.logo-mark__st span {
+  margin-left: -0.05em;
+  color: var(--blue);
+  text-shadow: none;
 }
 
 .hero__code {
   border-top: 2px solid rgba(169, 184, 214, 0.45);
-}
-
-.hero__code {
   padding: 1.1rem 1.2rem;
   font-family: var(--mono);
   font-size: 0.82rem;
@@ -532,13 +549,25 @@ img {
   align-items: center;
 }
 
-.about__photo {
-  width: 100%;
+.about__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   aspect-ratio: 1;
-  object-fit: cover;
   border: 3px solid var(--ink);
-  border-radius: 50%;
+  background: var(--card);
   box-shadow: 10px 10px 0 var(--blue);
+}
+
+.about__logo .logo-mark__code {
+  color: var(--blue-mist);
+}
+
+.about__logo .logo-mark__st {
+  font-size: 6.5rem;
+  color: var(--ink);
+  text-shadow: none;
 }
 
 /* Contact */
@@ -627,8 +656,11 @@ img {
   .hero__card {
     width: min(100%, 300px);
   }
-  .about__photo {
+  .about__logo {
     width: 200px;
+  }
+  .about__logo .logo-mark__st {
+    font-size: 5rem;
   }
 }
 

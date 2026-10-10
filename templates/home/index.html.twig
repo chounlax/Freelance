@@ -30,7 +30,11 @@
     </div>
 
     <div class="hero__card" aria-hidden="true">
-        <img src="{{ asset('img/sean.png') }}" alt="">
+        {# Logo « ST. » dessiné en HTML/CSS (même style que le logo du portfolio) #}
+        <div class="logo-mark">
+            <span class="logo-mark__code">&lt;/&gt;</span>
+            <span class="logo-mark__st">ST<span>.</span></span>
+        </div>
         <pre class="hero__code"><span class="c-key">const</span> sean = {
   role: <span class="c-str">'web & mobile dev'</span>,
   stack: [<span class="c-str">'Symfony'</span>, <span class="c-str">'Flutter'</span>],
@@ -148,7 +152,10 @@
 
 {# ---------- À propos ---------- #}
 <section id="about" class="section about">
-    <img class="about__photo" src="{{ asset('img/sean.png') }}" alt="{{ 'about.photo_alt'|trans }}" loading="lazy">
+    <div class="about__logo" aria-hidden="true">
+        <span class="logo-mark__code">&lt;/&gt;</span>
+        <span class="logo-mark__st">ST<span>.</span></span>
+    </div>
     <div>
         <p class="kicker">{{ 'about.kicker'|trans }}</p>
         <h2 class="title">{{ 'about.title'|trans }}<span>.</span></h2>

@@ -97,7 +97,6 @@ about:
     title: "About me"
     text_1: "I'm Sean, a web & mobile developer and a computer science student (BTS SIO, the French two-year degree in software development) based near Arras, France."
     text_2: "During my internship I worked in a team on Wheello, a fleet-management system combining a Symfony back office, an API and a Flutter app. I care about clean code, clear communication and doing things properly."
-    photo_alt: "Portrait of Sean Thompson"
 
 contact:
     kicker: "// 06 — CONTACT"

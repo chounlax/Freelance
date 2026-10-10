@@ -96,7 +96,6 @@ about:
     title: "Qui suis-je ?"
     text_1: "Je suis Sean, développeur web & mobile et étudiant en BTS SIO (développement d'applications), près d'Arras."
     text_2: "Pendant mon stage, j'ai travaillé en équipe sur Wheello, un système de gestion de flotte qui réunit un back-office Symfony, une API et une application Flutter. J'attache de l'importance à un code propre, à une communication claire et au travail bien fait."
-    photo_alt: "Portrait de Sean Thompson"
 
 contact:
     kicker: "// 06 — CONTACT"
