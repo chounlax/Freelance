@@ -1,0 +1,110 @@
+# All the texts of the site in English (default language, for Upwork clients).
+# messages.fr.yaml contains exactly the same keys in French.
+meta:
+    title: "Sean Thompson — Freelance Web & Mobile Developer"
+    description: "Sean Thompson, freelance web and mobile developer based in France: websites, custom web applications, Flutter mobile apps and maintenance."
+
+nav:
+    services: "Services"
+    work: "Work"
+    process: "Process"
+    about: "About"
+    contact: "Contact"
+    language: "Language"
+
+hero:
+    kicker: "AVAILABLE FOR NEW PROJECTS"
+    hello: "Hi, I'm Sean —"
+    title: "freelance web & mobile developer."
+    text: "I help small businesses, startups and non-profits turn their ideas into clean, fast and reliable products: websites, web applications and mobile apps, from the database to the screen."
+    location: "Based in France · working remotely"
+    languages: "French · English"
+    cta_work: "See my work"
+
+cta:
+    upwork: "Hire me on Upwork"
+    email: "Send me an e-mail"
+
+services:
+    kicker: "// 01 — SERVICES"
+    title: "What I can do for you"
+    for: "GREAT FOR"
+    1:
+        title: "Showcase website"
+        text: "A clear, fast website to present your business and your work, easy to read on phones and computers, with a contact form."
+        for: "Craftspeople, shops, non-profits"
+        tags: "Responsive, Contact form, Hosting setup"
+    2:
+        title: "Custom web application"
+        text: "A tool that fits the way you work: customers, bookings or stock management, with a database and a secure admin area."
+        for: "Small businesses, internal teams"
+        tags: "Symfony, PHP, MySQL"
+    3:
+        title: "Mobile app"
+        text: "An Android and iOS app for your customers or your field teams, connected to your data through an API."
+        for: "Field teams, customer services"
+        tags: "Flutter, Dart, REST API"
+    4:
+        title: "Maintenance & updates"
+        text: "Bug fixes, small improvements and content updates on an existing website, so it stays reliable and up to date."
+        for: "Websites and apps already online"
+        tags: "Bug fixes, Improvements, Content"
+
+work:
+    kicker: "// 02 — SELECTED WORK"
+    title: "Recent projects"
+    my_part: "MY PART"
+    wheello:
+        meta: "TEAM PROJECT · INTERNSHIP 2026"
+        text: "A business application for the non-profit Habitat Insertion to manage its vehicle fleet: a Symfony back office, a JWT-secured REST API and a Flutter mobile app for staff in the field."
+        part_1: "Connected the Flutter app to the API (authenticated requests, JSON parsing, screens)"
+        part_2: "Data modelling and test data"
+        part_3: "Team organisation: tasks, planning and follow-up"
+        web: "Back office (web)"
+        mobile: "Mobile app"
+    portfolio:
+        meta: "PERSONAL PROJECT · 2026"
+        title: "Developer portfolio"
+        text: "My student portfolio: a Symfony site with an interactive 3D header, automatically deployed to GitHub Pages on every change."
+        link: "Visit the portfolio"
+
+stack:
+    kicker: "// 03 — STACK"
+    title: "Tools I work with"
+    backend: "BACK-END"
+    mobile: "MOBILE"
+    data: "DATA & APIS"
+    tools: "TOOLS"
+
+process:
+    kicker: "// 04 — PROCESS"
+    title: "How we'll work"
+    1:
+        title: "Discussion"
+        text: "We talk about your project, your goals and your constraints."
+    2:
+        title: "Proposal"
+        text: "I send you a clear plan: what will be built, the price and the timeline."
+    3:
+        title: "Development"
+        text: "I build your project and share regular progress updates."
+    4:
+        title: "Delivery"
+        text: "Your project goes live and I show you how to use it."
+
+about:
+    kicker: "// 05 — ABOUT"
+    title: "About me"
+    text_1: "I'm Sean, a web & mobile developer and a computer science student (BTS SIO, the French two-year degree in software development) based near Arras, France."
+    text_2: "During my internship I worked in a team on Wheello, a fleet-management system combining a Symfony back office, an API and a Flutter app. I care about clean code, clear communication and doing things properly."
+    photo_alt: "Portrait of Sean Thompson"
+
+contact:
+    kicker: "// 06 — CONTACT"
+    title: "Let's work together."
+    text: "Tell me about your project: I'll get back to you with questions or a proposal."
+
+footer:
+    role: "Freelance web & mobile developer"
+    hosting: "Hosted on GitHub Pages"
+    portfolio: "Student portfolio"

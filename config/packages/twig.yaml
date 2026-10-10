@@ -1,0 +1,13 @@
+twig:
+    file_name_pattern: '*.twig'
+    # Infos de contact disponibles dans tous les templates
+    globals:
+        email: 'sd.thompson80200@gmail.com'
+        # Lien de ton profil Upwork : laisse vide tant qu'il n'existe pas (le bouton est alors masqué)
+        upwork_url: ''
+        github_url: 'https://github.com/chounlax'
+        portfolio_url: 'https://chounlax.github.io/Portfolio/'
+
+when@test:
+    twig:
+        strict_variables: true

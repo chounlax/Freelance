@@ -1,0 +1,171 @@
+{% extends 'base.html.twig' %}
+
+{# Boutons de contact, réutilisés en haut et en bas de la page.
+   Le bouton Upwork n'apparaît que si upwork_url est rempli (config/packages/twig.yaml). #}
+{% macro contact_buttons(email, upwork_url) %}
+    <div class="cta">
+        {% if upwork_url %}
+            <a class="btn btn--primary" href="{{ upwork_url }}" target="_blank" rel="noopener">{{ 'cta.upwork'|trans }} →</a>
+        {% endif %}
+        <a class="btn {{ upwork_url ? 'btn--ghost' : 'btn--primary' }}" href="mailto:{{ email }}?subject=Project">{{ 'cta.email'|trans }}</a>
+    </div>
+{% endmacro %}
+
+{% block body %}
+
+{# ---------- En-tête ---------- #}
+<section class="hero">
+    <div class="hero__text">
+        <p class="kicker kicker--light"><span class="dot"></span> {{ 'hero.kicker'|trans }}</p>
+        <h1>
+            <span class="hero__hello">{{ 'hero.hello'|trans }}</span>
+            {{ 'hero.title'|trans }}
+        </h1>
+        <p class="hero__lead">{{ 'hero.text'|trans }}</p>
+        {{ _self.contact_buttons(email, upwork_url) }}
+        <ul class="hero__facts">
+            <li>{{ 'hero.location'|trans }}</li>
+            <li>{{ 'hero.languages'|trans }}</li>
+        </ul>
+    </div>
+
+    <div class="hero__card" aria-hidden="true">
+        <img src="{{ asset('img/sean.png') }}" alt="">
+        <pre class="hero__code"><span class="c-key">const</span> sean = {
+  role: <span class="c-str">'web & mobile dev'</span>,
+  stack: [<span class="c-str">'Symfony'</span>, <span class="c-str">'Flutter'</span>],
+  available: <span class="c-ok">true</span>,
+};</pre>
+    </div>
+</section>
+
+{# ---------- Services ---------- #}
+<section id="services" class="section">
+    <p class="kicker">{{ 'services.kicker'|trans }}</p>
+    <h2 class="title">{{ 'services.title'|trans }}<span>.</span></h2>
+    <div class="grid grid--2">
+        {% for i in 1..4 %}
+            <article class="card service">
+                <span class="service__num">0{{ i }}</span>
+                <h3>{{ ('services.' ~ i ~ '.title')|trans }}</h3>
+                <p>{{ ('services.' ~ i ~ '.text')|trans }}</p>
+                <p class="service__for"><span>{{ 'services.for'|trans }}</span> {{ ('services.' ~ i ~ '.for')|trans }}</p>
+                <ul class="tags">
+                    {% for tag in ('services.' ~ i ~ '.tags')|trans|split(', ') %}
+                        <li>{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+
+{# ---------- Projets ---------- #}
+<section id="work" class="section">
+    <p class="kicker">{{ 'work.kicker'|trans }}</p>
+    <h2 class="title">{{ 'work.title'|trans }}<span>.</span></h2>
+
+    <article class="card project">
+        <div class="project__shots">
+            <figure class="shot shot--web">
+                <img src="{{ asset('img/back-office-accueil.webp') }}" alt="Wheello — {{ 'work.wheello.web'|trans }}" loading="lazy">
+            </figure>
+            <figure class="shot shot--phone">
+                <img src="{{ asset('img/mobile-reservations.webp') }}" alt="Wheello — {{ 'work.wheello.mobile'|trans }}" loading="lazy">
+            </figure>
+        </div>
+        <div class="project__text">
+            <p class="mono project__meta">{{ 'work.wheello.meta'|trans }}</p>
+            <h3>Wheello<span>.</span></h3>
+            <p>{{ 'work.wheello.text'|trans }}</p>
+            <p class="mono project__part">{{ 'work.my_part'|trans }}</p>
+            <ul class="checks">
+                <li>{{ 'work.wheello.part_1'|trans }}</li>
+                <li>{{ 'work.wheello.part_2'|trans }}</li>
+                <li>{{ 'work.wheello.part_3'|trans }}</li>
+            </ul>
+            <ul class="tags">
+                {% for tag in ['Symfony', 'Flutter', 'Dart', 'REST API', 'JWT', 'MySQL'] %}
+                    <li>{{ tag }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </article>
+
+    <article class="card project project--small">
+        <div class="project__text">
+            <p class="mono project__meta">{{ 'work.portfolio.meta'|trans }}</p>
+            <h3>{{ 'work.portfolio.title'|trans }}<span>.</span></h3>
+            <p>{{ 'work.portfolio.text'|trans }}</p>
+            <ul class="tags">
+                {% for tag in ['Symfony', 'Twig', 'Vite', 'three.js', 'GitHub Actions'] %}
+                    <li>{{ tag }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a class="btn btn--dark" href="{{ portfolio_url }}" target="_blank" rel="noopener">{{ 'work.portfolio.link'|trans }} →</a>
+    </article>
+</section>
+
+{# ---------- Outils ---------- #}
+<section class="section">
+    <p class="kicker">{{ 'stack.kicker'|trans }}</p>
+    <h2 class="title">{{ 'stack.title'|trans }}<span>.</span></h2>
+    {% set stack = {
+        'stack.backend': ['PHP', 'Symfony', 'Doctrine', 'Twig', 'HTML', 'CSS'],
+        'stack.mobile': ['Flutter', 'Dart'],
+        'stack.data': ['SQL', 'MySQL', 'MariaDB', 'REST API', 'JWT'],
+        'stack.tools': ['Git', 'GitHub', 'GitHub Actions', 'VS Code'],
+    } %}
+    <div class="card stack">
+        {% for label, items in stack %}
+            <div class="stack__row">
+                <p class="mono">{{ label|trans }}</p>
+                <ul class="tags">
+                    {% for item in items %}<li>{{ item }}</li>{% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+{# ---------- Méthode ---------- #}
+<div class="dark">
+    <section id="process" class="section">
+        <p class="kicker kicker--light">{{ 'process.kicker'|trans }}</p>
+        <h2 class="title">{{ 'process.title'|trans }}<span>.</span></h2>
+        <ol class="steps">
+            {% for i in 1..4 %}
+                <li class="step">
+                    <span class="step__num">0{{ i }}</span>
+                    <h3>{{ ('process.' ~ i ~ '.title')|trans }}</h3>
+                    <p>{{ ('process.' ~ i ~ '.text')|trans }}</p>
+                </li>
+            {% endfor %}
+        </ol>
+    </section>
+</div>
+
+{# ---------- À propos ---------- #}
+<section id="about" class="section about">
+    <img class="about__photo" src="{{ asset('img/sean.png') }}" alt="{{ 'about.photo_alt'|trans }}" loading="lazy">
+    <div>
+        <p class="kicker">{{ 'about.kicker'|trans }}</p>
+        <h2 class="title">{{ 'about.title'|trans }}<span>.</span></h2>
+        <p class="lead">{{ 'about.text_1'|trans }}</p>
+        <p class="lead">{{ 'about.text_2'|trans }}</p>
+    </div>
+</section>
+
+{# ---------- Contact ---------- #}
+<section id="contact" class="section">
+    <div class="contact">
+        <p class="kicker kicker--light">{{ 'contact.kicker'|trans }}</p>
+        <h2>{{ 'contact.title'|trans }}</h2>
+        <p>{{ 'contact.text'|trans }}</p>
+        {{ _self.contact_buttons(email, upwork_url) }}
+        <p class="mono contact__mail">{{ email }}</p>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,109 @@
+# Tous les textes du site en français (même clés que messages.en.yaml).
+meta:
+    title: "Sean Thompson — Développeur web & mobile freelance"
+    description: "Sean Thompson, développeur web et mobile freelance en France : sites vitrines, applications web sur mesure, applications mobiles Flutter et maintenance."
+
+nav:
+    services: "Services"
+    work: "Projets"
+    process: "Méthode"
+    about: "À propos"
+    contact: "Contact"
+    language: "Langue"
+
+hero:
+    kicker: "DISPONIBLE POUR DE NOUVEAUX PROJETS"
+    hello: "Bonjour, moi c'est Sean —"
+    title: "développeur web & mobile freelance."
+    text: "J'aide les petites entreprises, start-ups et associations à transformer leurs idées en produits clairs, rapides et fiables : sites, applications web et applications mobiles, de la base de données jusqu'à l'écran."
+    location: "En France · travail à distance"
+    languages: "Français · Anglais"
+    cta_work: "Voir mes projets"
+
+cta:
+    upwork: "Me contacter sur Upwork"
+    email: "M'envoyer un e-mail"
+
+services:
+    kicker: "// 01 — SERVICES"
+    title: "Ce que je peux faire pour vous"
+    for: "IDÉAL POUR"
+    1:
+        title: "Site vitrine"
+        text: "Un site clair et rapide pour présenter votre activité et vos réalisations, lisible sur téléphone comme sur ordinateur, avec un formulaire de contact."
+        for: "Artisans, commerces, associations"
+        tags: "Responsive, Formulaire de contact, Mise en ligne"
+    2:
+        title: "Application web sur mesure"
+        text: "Un outil adapté à votre façon de travailler : gestion de clients, de réservations ou de stocks, avec une base de données et un espace d'administration sécurisé."
+        for: "Petites entreprises, équipes internes"
+        tags: "Symfony, PHP, MySQL"
+    3:
+        title: "Application mobile"
+        text: "Une application Android et iOS pour vos clients ou vos équipes sur le terrain, reliée à vos données grâce à une API."
+        for: "Équipes terrain, services aux clients"
+        tags: "Flutter, Dart, API REST"
+    4:
+        title: "Maintenance & mises à jour"
+        text: "Corrections, petites évolutions et mise à jour des contenus d'un site existant, pour qu'il reste fiable et à jour."
+        for: "Sites et applications déjà en ligne"
+        tags: "Corrections, Évolutions, Contenus"
+
+work:
+    kicker: "// 02 — RÉALISATIONS"
+    title: "Projets récents"
+    my_part: "MA PARTIE"
+    wheello:
+        meta: "PROJET EN ÉQUIPE · STAGE 2026"
+        text: "Application métier pour l'association Habitat Insertion, qui gère sa flotte de véhicules : un back-office Symfony, une API REST sécurisée par JWT et une application mobile Flutter pour les salariés sur le terrain."
+        part_1: "Connexion de l'application Flutter à l'API (requêtes authentifiées, JSON, écrans)"
+        part_2: "Modélisation des données et données de test"
+        part_3: "Organisation de l'équipe : tâches, planning et suivi"
+        web: "Back-office (web)"
+        mobile: "Application mobile"
+    portfolio:
+        meta: "PROJET PERSONNEL · 2026"
+        title: "Portfolio de développeur"
+        text: "Mon portfolio étudiant : un site Symfony avec un en-tête 3D interactif, mis en ligne automatiquement sur GitHub Pages à chaque modification."
+        link: "Voir le portfolio"
+
+stack:
+    kicker: "// 03 — OUTILS"
+    title: "Les outils que j'utilise"
+    backend: "BACK-END"
+    mobile: "MOBILE"
+    data: "DONNÉES & API"
+    tools: "OUTILS"
+
+process:
+    kicker: "// 04 — MÉTHODE"
+    title: "Comment on travaille"
+    1:
+        title: "Échange"
+        text: "On parle de votre projet, de vos objectifs et de vos contraintes."
+    2:
+        title: "Proposition"
+        text: "Je vous envoie un plan clair : ce qui sera réalisé, le prix et le délai."
+    3:
+        title: "Réalisation"
+        text: "Je développe votre projet et vous tiens régulièrement au courant."
+    4:
+        title: "Livraison"
+        text: "Votre projet est mis en ligne et je vous explique comment l'utiliser."
+
+about:
+    kicker: "// 05 — À PROPOS"
+    title: "Qui suis-je ?"
+    text_1: "Je suis Sean, développeur web & mobile et étudiant en BTS SIO (développement d'applications), près d'Arras."
+    text_2: "Pendant mon stage, j'ai travaillé en équipe sur Wheello, un système de gestion de flotte qui réunit un back-office Symfony, une API et une application Flutter. J'attache de l'importance à un code propre, à une communication claire et au travail bien fait."
+    photo_alt: "Portrait de Sean Thompson"
+
+contact:
+    kicker: "// 06 — CONTACT"
+    title: "Travaillons ensemble."
+    text: "Parlez-moi de votre projet : je reviens vers vous avec des questions ou une proposition."
+
+footer:
+    role: "Développeur web & mobile freelance"
+    hosting: "Hébergé sur GitHub Pages"
+    portfolio: "Portfolio étudiant"

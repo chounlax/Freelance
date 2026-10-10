@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="{{ app.request.locale }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ 'meta.title'|trans }}</title>
+        <meta name="description" content="{{ 'meta.description'|trans }}">
+        <link rel="icon" href="{{ asset('img/sean.png') }}">
+        {# la même page dans l'autre langue, pour les moteurs de recherche #}
+        <link rel="alternate" hreflang="en" href="{{ path('home', {_locale: 'en'}) }}">
+        <link rel="alternate" hreflang="fr" href="{{ path('home', {_locale: 'fr'}) }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    </head>
+    <body>
+        <header class="nav">
+            <a href="#top" class="nav__logo">ST<span>.</span></a>
+            <nav class="nav__links">
+                <a href="#services">{{ 'nav.services'|trans }}</a>
+                <a href="#work">{{ 'nav.work'|trans }}</a>
+                <a href="#process">{{ 'nav.process'|trans }}</a>
+                <a href="#about">{{ 'nav.about'|trans }}</a>
+                <a href="#contact">{{ 'nav.contact'|trans }}</a>
+            </nav>
+            {# Bouton de langue : la même route, avec l'autre _locale #}
+            <nav class="lang" aria-label="{{ 'nav.language'|trans }}">
+                {% for locale in ['en', 'fr'] %}
+                    <a href="{{ path('home', {_locale: locale}) }}" hreflang="{{ locale }}"
+                       {% if app.request.locale == locale %}class="is-active" aria-current="page"{% endif %}>{{ locale|upper }}</a>
+                {% endfor %}
+            </nav>
+        </header>
+
+        <main id="top">
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer class="footer">
+            <p>© {{ 'now'|date('Y') }} Sean Thompson · {{ 'footer.role'|trans }}</p>
+            <p>
+                <a href="{{ portfolio_url }}">{{ 'footer.portfolio'|trans }}</a> ·
+                <a href="{{ github_url }}">GitHub</a> ·
+                {{ 'footer.hosting'|trans }}
+            </p>
+        </footer>
+    </body>
+</html>
